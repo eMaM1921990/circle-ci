@@ -1,12 +1,6 @@
 version: 2.1
 orbs: null
 jobs:
-  myjob1:
-    docker:
-      - image: null
-    steps:
-      - checkout
-      - run: echo "hello world"
   create_infrastructure:
     docker:
       - image: amazon/aws-cli
@@ -22,5 +16,4 @@ jobs:
 workflows:
   myWorkflow:
     jobs:
-      - myjob1
       - create_infrastructure
